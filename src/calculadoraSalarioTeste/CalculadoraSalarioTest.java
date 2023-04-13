@@ -67,7 +67,18 @@ public class CalculadoraSalarioTest {
 		
 	}
 	
-	
-	
+	@Test
+	public void testaGerente() throws Exception{
+				
+		Assert.assertEquals(Double.valueOf(3850), funcGer.getSalarioLiquido(), 0.0);
+		funcGer.setSalarioBase(5000);
+		Assert.assertEquals(Double.valueOf(3500), funcGer.getSalarioLiquido(), 0.0);
+		funcGer.setSalarioBase(4500);
+		Assert.assertEquals(Double.valueOf(3600), funcGer.getSalarioLiquido(), 0.0);
+		funcGer.setSalarioBase(0);
+		Assert.assertEquals(Double.valueOf(0), funcGer.getSalarioLiquido(), 0.0);
+		
+	}
+
 	
 }
