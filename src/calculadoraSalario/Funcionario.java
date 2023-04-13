@@ -10,6 +10,7 @@ public class Funcionario {
 	double desconto15 = 0.85;
 	double desconto20 = 0.8;
 	double desconto25 = 0.75;
+	double desconto30 = 0.7;
 	
 	public Funcionario(String nome, String email, double salarioBase, Cargo cargo) {
 		
@@ -56,6 +57,19 @@ public class Funcionario {
 				}else {
 					if(salarioBase != 0) {
 						salarioLiquido = salarioBase * desconto15;
+					}else {
+						salarioLiquido = salarioBase;
+					}
+				}
+				
+				break;
+				
+			case GERENTE:
+				if(salarioBase >= 5000) {
+					salarioLiquido = salarioBase * desconto30;
+				}else {
+					if(salarioBase != 0) {
+						salarioLiquido = salarioBase * desconto20;
 					}else {
 						salarioLiquido = salarioBase;
 					}
