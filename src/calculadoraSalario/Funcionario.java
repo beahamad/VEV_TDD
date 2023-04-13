@@ -31,6 +31,8 @@ public class Funcionario {
 				}else{
 					if(salarioBase != 0) {
 						salarioLiquido = salarioBase * desconto10;
+					}else {
+						salarioLiquido = salarioBase;
 					}
 				}
 				
@@ -38,7 +40,6 @@ public class Funcionario {
 				
 			default:
 				salarioLiquido = salarioBase;
-				
 		}
 
 	}
@@ -77,6 +78,7 @@ public class Funcionario {
 
 	public void setSalarioBase(double salarioBase) {
 		this.salarioBase = salarioBase;
+		calculaDesconto();
 	}
 	
 
