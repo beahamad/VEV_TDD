@@ -1,8 +1,11 @@
-package calculadoraSalario;
+package calculadoraSalarioTeste;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import calculadoraSalario.Cargo;
+import calculadoraSalario.Funcionario;
 
 public class CalculadoraSalarioTest {	
 
@@ -18,9 +21,9 @@ public class CalculadoraSalarioTest {
 	public void setUp() throws Exception {
 		
 		this.funcDev = new Funcionario("volney", "volney@gmail.com", 3500.00, Cargo.DESENVOLVEDOR);
-		this.funcDBA = new Funcionario("volney", "volney@gmail.com", 2500.00, Cargo.DESENVOLVEDOR);
-		this.funcTest = new Funcionario("volney", "volney@gmail.com", 2500.00, Cargo.DESENVOLVEDOR);
-		this.funcGer = new Funcionario("volney", "volney@gmail.com", 5500.00, Cargo.DESENVOLVEDOR);
+		this.funcDBA = new Funcionario("volney", "volney@gmail.com", 2500.00, Cargo.DBA);
+		this.funcTest = new Funcionario("volney", "volney@gmail.com", 2500.00, Cargo.TESTADOR);
+		this.funcGer = new Funcionario("volney", "volney@gmail.com", 5500.00, Cargo.GERENTE);
 
 	
 	}

@@ -37,6 +37,18 @@ public class Funcionario {
 				}
 				
 				break;
+			case DBA:
+				if(salarioBase >= 2000) {
+					salarioLiquido = salarioBase * desconto25;
+				}else {
+					if(salarioBase != 0) {
+						salarioLiquido = salarioBase * desconto15;
+					}else {
+						salarioLiquido = salarioBase;
+					}
+				}
+				
+				break;
 				
 			default:
 				salarioLiquido = salarioBase;
