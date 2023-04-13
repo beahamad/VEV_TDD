@@ -54,6 +54,20 @@ public class CalculadoraSalarioTest {
 		
 	}
 	
+	@Test
+	public void testaTestador() throws Exception{
+				
+		Assert.assertEquals(Double.valueOf(1875), funcTest.getSalarioLiquido(), 0.0);
+		funcDBA.setSalarioBase(2000);
+		Assert.assertEquals(Double.valueOf(1500), funcTest.getSalarioLiquido(), 0.0);
+		funcDBA.setSalarioBase(1500);
+		Assert.assertEquals(Double.valueOf(1275), funcTest.getSalarioLiquido(), 0.0);
+		funcDBA.setSalarioBase(0);
+		Assert.assertEquals(Double.valueOf(0), funcTest.getSalarioLiquido(), 0.0);
+		
+	}
+	
+	
 	
 	
 }
